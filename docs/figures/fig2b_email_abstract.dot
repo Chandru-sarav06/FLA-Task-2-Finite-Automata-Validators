@@ -1,0 +1,9 @@
+digraph G { rankdir=LR; node [shape=circle, fontsize=11]; edge [fontsize=10];
+ s [shape=point,width=0.1]; s -> L0;
+ L0 [label="L0\nstart"]; L1 [label="L1\nlocal\nalnum"]; L2 [label="L2\nafter . _ -"];
+ D0 [label="D0\nafter @"]; D1 [label="D1\nlabel"]; D2 [label="D2\nafter -"]; D3 [label="D3\nafter ."];
+ T [label="TLD\nmatch", shape=doublecircle];
+ L0 -> L1 [label="alnum"]; L1 -> L1 [label="alnum"]; L1 -> L2 [label=". _ -"]; L2 -> L1 [label="alnum"];
+ L1 -> D0 [label="@"]; D0 -> D1 [label="alnum"]; D1 -> D1 [label="alnum"]; D1 -> D2 [label="-"]; D2 -> D1 [label="alnum"];
+ D1 -> D3 [label="."]; D3 -> D1 [label="alnum"]; D3 -> T [label="com | org | edu | net | in"]; T -> D3 [label="."];
+ }

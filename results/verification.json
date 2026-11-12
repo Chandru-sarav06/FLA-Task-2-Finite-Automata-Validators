@@ -1,0 +1,39 @@
+{
+  "pin": {
+    "strings": 97656,
+    "mismatches": 0,
+    "alphabet": "0123x",
+    "max_len": 7
+  },
+  "email": {
+    "strings": 1111111,
+    "mismatches": 0,
+    "alphabet": "a1.@-incom",
+    "max_len": 6
+  },
+  "password": {
+    "strings": 688281,
+    "mismatches": 0,
+    "note": "all class strings len<=8 + 200000 random len<=20"
+  },
+  "sizes": {
+    "pin_nfa": 22,
+    "pin_subset_dfa": 8,
+    "pin_min": 8,
+    "pin_with_denylist_min": 42,
+    "email_nfa": 82,
+    "email_nfa_transitions": 454,
+    "email_subset_dfa": 32,
+    "email_min": 16,
+    "password_components": {
+      "length 8-16": 18,
+      "only allowed symbols": 2,
+      "has lowercase": 2,
+      "has uppercase": 2,
+      "has digit": 2,
+      "has special": 2
+    },
+    "password_naive_product": 576,
+    "password_min": 197
+  }
+}
